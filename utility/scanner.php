@@ -135,7 +135,7 @@ class Scanner extends PublicEmitter {
 			}
 
 
-			$fileInfo = $this->extractor->extract('oc://' . $file->getPath());
+			$fileInfo = $this->extractor->extract($file->fopen('r');
 
 			$hasComments = array_key_exists('comments', $fileInfo);
 

@@ -43,7 +43,7 @@ use \OCA\Music\DB\TrackMapper;
 use \OCA\Music\Middleware\AmpacheMiddleware;
 
 use \OCA\Music\Utility\AmpacheUser;
-use \OCA\Music\Utility\ExtractorGetID3;
+use \OCA\Music\Utility\ExtractorGetPHPID3;
 use \OCA\Music\Utility\Helper;
 use \OCA\Music\Utility\Scanner;
 
@@ -245,8 +245,8 @@ class Music extends App {
 		});
 
 		$container->registerService('ExtractorGetID3', function($c) {
-			return new ExtractorGetID3(
-				$c->query('getID3'),
+			return new ExtractorGetPHPID3(
+#				$c->query('getID3'),
 				$c->query('Logger')
 			);
 		});
